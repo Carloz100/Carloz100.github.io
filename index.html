@@ -35,6 +35,20 @@
       text-shadow: 0 0 15px rgba(255, 165, 0, 0.8); /* Neon glow effect */
     }
 
+    .photo-gallery {
+      margin-bottom: 20px;
+    }
+
+    .photo-gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 10px;
+      border: 2px solid orange;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.6); /* Image glow */
+    }
+
     button {
       padding: 10px 20px;
       font-size: 1.2rem;
@@ -91,6 +105,13 @@
 
   <div class="container">
     <h1>Welcome to the Story Page</h1>
+    
+    <div class="photo-gallery">
+      <img src="images/01.jpg" alt="Photo 1">
+      <img src="images/2.jpg" alt="Photo 2">
+      <img src="images/3.jpg" alt="Photo 3">
+    </div>
+    
     <button id="watchAdButton">Watch Ad</button>
     <button id="readStoryButton" class="disabled" disabled>Read Story</button>
   </div>
