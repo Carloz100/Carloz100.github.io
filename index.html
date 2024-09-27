@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page with Particle Animation</title>
+  <title>අලුත් රස කතා කියවන්න එන්න</title>
   <style>
     * {
       margin: 0;
@@ -104,17 +104,31 @@
 <body>
 
   <div class="container">
-    <h1>Welcome to the Story Page</h1>
+    <h1>අලුත් රස කතා කියවන්න එන්න</h1>
     
     <div class="photo-gallery">
-      <img src="images/01.jpg" alt="Photo 1">
-      <img src="images/2.jpg" alt="Photo 2">
-      <img src="images/3.jpg" alt="Photo 3">
+      <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
+        <img src="images/01.jpg" alt="Photo 1">
+      </a>
+      <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
+        <img src="images/2.jpg" alt="Photo 1">
+      </a>
+      <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
+        <img src="images/3.jpg" alt="Photo 1">
+      </a>
     </div>
     
-    <button id="watchAdButton">Watch Ad</button>
-    <button id="readStoryButton" class="disabled" disabled>Read Story</button>
+    <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
+      <button id="watchAdButton">Watch Ad</button>
+    </a>
+    
+    <a href="https://sinhalawalkthalk.blogspot.com" id="readStoryLink" style="display: none;">
+      <button id="readStoryButton" class="disabled" disabled>Read Story</button>
+    </a>
+     <br>
+    <p style="color: rgb(250, 35, 35);opacity: 50%;margin-top: 10px;">( watch ad බටන් එක උඩ ඔබන්න. එම ඇඩ් එක තත්පර 10ක් නරඹා පැමිණෙන්න. එවිට කතාව කියවන්න බටන් එක සක්‍රිය වෙනවා )</p>
   </div>
+  
 
   <script>
     // Particle effect
@@ -141,14 +155,17 @@
     setInterval(createParticle, 300);
 
     document.getElementById("watchAdButton").addEventListener("click", function() {
-      const readStoryButton = document.getElementById("readStoryButton");
+  const readStoryButton = document.getElementById("readStoryButton");
+  const readStoryLink = document.getElementById("readStoryLink");
 
-      // Wait for 3 seconds before enabling the "Read Story" button
-      setTimeout(function() {
-        readStoryButton.classList.remove("disabled");
-        readStoryButton.disabled = false;
-      }, 3000); // 3000 milliseconds = 3 seconds
-    });
+  // Wait for 3 seconds before enabling the "Read Story" button
+  setTimeout(function() {
+    readStoryButton.classList.remove("disabled");
+    readStoryButton.disabled = false;
+    readStoryLink.style.display = 'inline'; // Show the link
+  }, 3000); // 3000 milliseconds = 3 seconds
+});
+
   </script>
 
 </body>
