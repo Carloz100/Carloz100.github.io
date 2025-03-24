@@ -1,172 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>අලුත් රස කතා කියවන්න එන්න</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Live Stream | Watch Now</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      background-color: #0d0d0d; /* Dark background */
-      position: relative;
-    }
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow-x: hidden;
+        }
 
-    .container {
-      text-align: center;
-      color: white;
-      z-index: 1; /* Ensure content is above particles */
-    }
+        /* Header Styling */
+        header {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
 
-    h1 {
-      margin-bottom: 20px;
-      font-size: 2.5rem;
-      color: orange;
-      text-shadow: 0 0 15px rgba(255, 165, 0, 0.8); /* Neon glow effect */
-    }
+        /* Main Content Container */
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin-top: 100px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
 
-    .photo-gallery {
-      margin-bottom: 20px;
-    }
+        /* Video Player Styling */
+        video {
+            width: 100%;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-    .photo-gallery img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      margin: 0 10px;
-      border: 2px solid orange;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 165, 0, 0.6); /* Image glow */
-    }
+        /* Footer Styling */
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
 
-    button {
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 5px;
-      margin: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px rgba(255, 165, 0, 0.6); /* Button glow */
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5rem;
+                padding: 10px 0;
+            }
 
-    #watchAdButton {
-      background-color: orange;
-      color: black;
-    }
-
-    #readStoryButton {
-      background-color: black;
-      color: orange;
-      border: 2px solid orange;
-    }
-
-    .disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    button:active {
-      transform: scale(0.95);
-    }
-
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255, 165, 0, 0.8); /* Particle color */
-      pointer-events: none; /* Prevent interaction */
-      animation: float 5s infinite; /* Particle float animation */
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px); /* Upward movement */
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-  </style>
+            video {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>Sports Live Streaming</header>
 
-  <div class="container">
-    <h1>අලුත් රස කතා කියවන්න එන්න</h1>
-    
-    <div class="photo-gallery">
-      <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
-        <img src="images/01.jpg" alt="Photo 1">
-      </a>
-      <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
-        <img src="images/2.jpg" alt="Photo 1">
-      </a>
-      <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
-        <img src="images/3.jpg" alt="Photo 1">
-      </a>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Video Player -->
+        <video id="video" controls autoplay></video>
+
+        <!-- Footer -->
+        <footer>&copy; 2025 Sports Live Stream. All rights reserved.</footer>
     </div>
+
     
-    <a href="https://www.cpmrevenuegate.com/ctwvgwbw?key=c7383789bde75180a54de276e7c0a0d9" target="_blank">
-      <button id="watchAdButton">Watch Now</button>
-    </a>
-    
-    <a href="https://sinhalawalkthalk.blogspot.com" id="readStoryLink" style="display: none;">
-      <button id="readStoryButton" class="disabled" disabled>Read Story</button>
-    </a>
-     <br>
-    <p style="color: rgb(250, 35, 35);opacity: 50%;margin-top: 10px;">( watch Now බටන් එක උඩ ඔබන්න. එම ඇඩ් එක තත්පර 10ක් නරඹා පැමිණෙන්න. එවිට කතාව කියවන්න බටන් එක සක්‍රිය වෙනවා )</p>
-  </div>
-  
+    <!-- Script to Load Video -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var video = document.getElementById('video');
 
-  <script>
-    // Particle effect
-    const createParticle = () => {
-      const particle = document.createElement('div');
-      const size = Math.random() * 10 + 5; // Random size between 5 and 15
-      const x = Math.random() * window.innerWidth;
-      const y = Math.random() * window.innerHeight;
+            // Base64 Encoded Video URL
+            var encodedSrc = "aHR0cHM6Ly8wMDEuZmNscGxheWVyLm9ubGluZS9saXZlL2Nzc3RyZWFtMS9wbGF5bGlzdC5tM3U4P2lkPTEwMDEmcGs9YTAyYjNmMjkzZjVhM2QwNGFkNzFhOGFmZmY4MjY3NWIwM2IxYzI0ODJhMDNjY2ZhZjU2YTM2MmI1OTFmMjg0NA==";
 
-      particle.className = 'particle';
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.left = `${x}px`;
-      particle.style.top = `${y}px`;
-      document.body.appendChild(particle);
+            function decodeBase64(str) {
+                return decodeURIComponent(escape(window.atob(str)));
+            }
 
-      // Remove particle after animation
-      setTimeout(() => {
-        particle.remove();
-      }, 5000); // Particle life duration
-    };
+            var videoSrc = decodeBase64(encodedSrc); // Decode video URL
 
-    // Generate particles every 300ms
-    setInterval(createParticle, 300);
+            function playVideo() {
+                if (Hls.isSupported()) {
+                    var hls = new Hls();
+                    hls.loadSource(videoSrc);
+                    hls.attachMedia(video);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                        video.play().catch(error => console.error("Playback error:", error));
+                    });
+                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    video.src = videoSrc;
+                    video.addEventListener('loadedmetadata', function () {
+                        video.play().catch(error => console.error("Native playback error:", error));
+                    });
+                } else {
+                    alert("Your browser does not support HLS streaming.");
+                }
+            }
 
-    document.getElementById("watchAdButton").addEventListener("click", function() {
-  const readStoryButton = document.getElementById("readStoryButton");
-  const readStoryLink = document.getElementById("readStoryLink");
+            playVideo();
 
-  // Wait for 3 seconds before enabling the "Read Story" button
-  setTimeout(function() {
-    readStoryButton.classList.remove("disabled");
-    readStoryButton.disabled = false;
-    readStoryLink.style.display = 'inline'; // Show the link
-  }, 3000); // 3000 milliseconds = 3 seconds
-});
-
-  </script>
-
+            // Retry on network issues
+            video.addEventListener('error', function () {
+                console.log("Retrying playback...");
+                playVideo();
+            });
+        });
+    </script>
 </body>
 </html>
